@@ -115,10 +115,7 @@
 						<select name="select-custom-21" id="EmpDropdown" data-mini="true" data-native-menu="false">
 							<option value="choose-one" data-placeholder="true">Choose one</option>
 								<option value="personal">Personal Details</option>
-        						<option value="contact">Contact Details</option>
-        						<option value="education">Education Details</option>
-        						<option value="employment">Employment Details</option>
-        						<option value="community">Community Tax Certificate Details</option>
+        						<option value="personal">Contact Details</option>
 						</select>
 					</div>
 				</div><div style="padding-top:0;" class="font-gray ui-content ui-body-a" data-theme="a" data-role="content" role="main">
@@ -135,135 +132,10 @@
 
 			</div>
 		</div>
-				<!--<p class="font-black" style="font-weight:bold;">Profile</p>
-				<div class="ui-grid-solo custom-grid">
-					<div class="ui-block-a">
-						<a data-role="button" data-mini="true" href="#" onclick="retriever('profile', 'personal');">Employee Personal Details</a>
-						<a data-role="button" data-mini="true" href="#" onclick="retriever('profile', 'contact');">Employee Contact Details</a>
-						<a data-role="button" data-mini="true" href="#" onclick="retriever('profile', 'education');">Employee Education Details</a>
-						<a data-role="button" data-mini="true" href="#" onclick="retriever('profile', 'employment');">Employment Details</a>
-						<a data-role="button" data-mini="true" href="#" onclick="retriever('profile', 'community');">Community Tax Certificate Details</a>
-					</div>
-				</div>-->
-
 			</div>
 
 		</div>	
-		
-		<div data-role="popup" id="popuppersonal" data-theme="a" class="ui-corner-all custom-popup">
-		  <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
-		    <form>
-		        <div style="padding:10px 20px;">
-		            <h3>Personal Details</h3>
-		            <label for="lastname">Last Name: </label>
-		            <input type="text" data-mini="true" name="lastname" id="lastname" value="" placeholder="Last Name" data-theme="a">
-		            <label for="firstname">First Name: </label>
-		            <input type="text" data-mini="true" name="firstname" id="firstname" value="" placeholder="First Name" data-theme="a">
-		            <label for="middlename">Middle Name: </label>
-		            <input type="text" data-mini="true" name="middlename" id="middlename" value="" placeholder="Middle Name" data-theme="a">
-		            <label for="middleinitial">Middle Initial: </label>
-		            <input type="text" data-mini="true" name="middleinitial" id="middleinitial" value="" placeholder="Middle Initial" data-theme="a">
-		            <label for="birthday">Birthday: </label>
-		            <input type="text" data-mini="true" name="birthday" id="birthday" value="" placeholder="Birthday" data-theme="a">
-		            <label for="gender">Gender: </label>
-		            <input type="text" data-mini="true" name="gender" id="gender" value="" placeholder="Gender" data-theme="a">
-		            <label for="civilstatus>Civil Status: </label>
-		            <input type="text" data-mini="true" name="civilstatus" id="civilstatus" value="" placeholder="Civil Status" data-theme="a">
-		            <label for="taxstatus>Tax Status: </label>
-		            <input type="text" data-mini="true" name="taxstatus" id="taxstatus" value="" placeholder="Tax Status" data-theme="a">
-		            <label for="sssno">SSS Number: </label>
-		            <input type="text" data-mini="true" name="sssno" id="sssno" value="" placeholder="SSS Number" data-theme="a">
-		            <label for="tinno">TIN Number: </label>
-		            <input type="text" data-mini="true" name="tinno" id="tinno" value="" placeholder="TIN Number" data-theme="a">
-		            <label for="philhealthno">Philhealth Number: </label>
-		            <input type="text" data-mini="true" name="philhealthno" id="philhealthno" value="" placeholder="Philhealth Number" data-theme="a">
-		            <label for="pagibigno">PAGIBIG Number: </label>
-		            <input type="text" data-mini="true" name="pagibigno" id="pagibigno" value="" placeholder="PAGIBIG Number" data-theme="a">
-		            <button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check">Submit</button>
-		        </div>
-		    </form>
-		  </a>
-		</div>
-		
-		<div data-role="popup" id="popupcontact" data-theme="a" class="ui-corner-all custom-popup">
-		  <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
-		    <form>
-		        <div style="padding:10px 20px;">
-		            <h3>Contact Details</h3>
-		            <label for="addressline 1">Address Line 1: </label>
-		            <input type="text" data-mini="true" name="addressline 1" id="addressline 1" value="" placeholder="Address Line 1" data-theme="a">
-		            <label for="addressline2">Address Line 2: </label>
-		            <input type="text" data-mini="true" name="addressline2" id="addressline2" value="" placeholder="Address Line 2" data-theme="a">
-		            <label for="districtmunicipal">District/Municipal: </label>
-		            <input type="text" data-mini="true" name="districtmunicipal" id="districtmunicipal" value="" placeholder="District/Municipal" data-theme="a">
-		            <label for="cityprovince">City/Province: </label>
-		            <input type="text" data-mini="true" name="cityprovince" id="cityprovince" value="" placeholder="City/Province" data-theme="a">
-		            <label for="postalcode">Postal Code: </label>
-		            <input type="text" data-mini="true" name="postalcode" id="postalcode" value="" placeholder="Postal Code" data-theme="a">
-		            <label for="personalemail">Personal Email: </label>
-		            <input type="text" data-mini="true" name="personalemail" id="personalemail" value="" placeholder="Personal Email" data-theme="a">
-		            <label for="acnemail">ACN Email: </label>
-		            <input type="text" data-mini="true" name="acnemail" id="acnemail" value="" placeholder="ACN Email" data-theme="a">
-		            <label for="extensionno">Extesnion Number: </label>
-		            <input type="text" data-mini="true" name="extensionno" id="extensionno" value="" placeholder="Extesnion Number" data-theme="a">
-		            <label for="personalno">Personal Number: </label>
-		            <input type="text" data-mini="true" name="personalno" id="personalno" value="" placeholder="Personal Number" data-theme="a">
-		            <button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check">Submit</button>
-		        </div>
-		    </form>
-		  </a>
-		</div>
-
-		<div data-role="popup" id="popupeducation" data-theme="a" class="ui-corner-all custom-popup">
-		  <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
-		    <form>
-		        <div style="padding:10px 20px;">
-		            <h3>Education Details</h3>
-		            <label for="degree">Degree: </label>
-		            <input type="text" data-mini="true" name="degree" id="degree" value="" placeholder="Degree" data-theme="a">
-		            <label for="course">Course: </label>
-		            <input type="text" data-mini="true" name="course" id="course" value="" placeholder="Course" data-theme="a">
-		            <label for="school">School: </label>
-		            <input type="text" data-mini="true" name="school" id="school" value="" placeholder="School" data-theme="a">
-		            <label for="graduationdate">Graduation Date: </label>
-		            <input type="text" data-mini="true" name="graduationdate" id="graduationdate" value="" placeholder="Graduation Date" data-theme="a">
-
-		            <button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check">Submit</button>
-		        </div>
-		    </form>
-		  </a>
-		</div>
-
-		<div data-role="popup" id="popupemployment" data-theme="a" class="ui-corner-all custom-popup">
-		  <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
-		    <form>
-		        <div style="padding:10px 20px;">
-		            <h3>Employment Details</h3>
-		            <label for="personnelno">Personnel Number: </label>
-		            <input type="text" data-mini="true" name="personnelno" id="personnelno" value="" placeholder="Personnel Number" data-theme="a">
-		            <label for="hiredate">Hire Date: </label>
-		            <input type="text" data-mini="true" name="hiredate" id="hiredate" value="" placeholder="Hire Date" data-theme="a">
-		            <label for="costcenter">Cost Center: </label>
-		            <input type="text" data-mini="true" name="costcenter" id="costcenter" value="" placeholder="Cost Center" data-theme="a">
-		            <label for="talentsegment">Talent Segment: </label>
-		            <input type="text" data-mini="true" name="talentsegment" id="talentsegment" value="" placeholder="Talent Segment" data-theme="a">
-		            <label for="role">Role: </label>
-		            <input type="text" data-mini="true" name="role" id="role" value="" placeholder="Role" data-theme="a">
-		            <label for="capability">Capability: </label>
-		            <input type="text" data-mini="true" name="capability" id="capability" value="" placeholder="Capability" data-theme="a">
-		            <label for="specialty">Specialty: </label>
-		            <input type="text" data-mini="true" name="specialty" id="specialty" value="" placeholder="Specialty" data-theme="a">
-		            <label for="careerlevel">Career Level: </label>
-		            <input type="text" data-mini="true" name="careerlevel" id="careerlevel" value="" placeholder="Career Level" data-theme="a">
-		            <label for="people advisor">People Advisor: </label>
-		            <input type="text" data-mini="true" name="people advisor" id="people advisor" value="" placeholder="People Advisor" data-theme="a">
-		            <label for="career counselor">Career Counselor: </label>
-		            <input type="text" data-mini="true" name="career counselor" id="career counselor" value="" placeholder="Career Counselor" data-theme="a">
-		            <button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check">Submit</button>
-		        </div>
-		    </form>
-		  </a>
-		</div>	
+	
 		<!--SCRIPT TAGS -->
 		<script src="themes/retriever.js"></script>
 		<script>
