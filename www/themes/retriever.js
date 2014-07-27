@@ -160,19 +160,19 @@ function getRejectedNannyRequest(items, user_id){
 function getEmployer(items, user_id){
 	$.each(items, function(index, val) {
 		if(val.user_id==user_id){
-		  $.each(val.users, function(index, value) {
-			displayerData("Last Name", value.user_l_name);
-		    displayerData("First Name", value.user_f_name);
-		    displayerData("Middle Name", value.user_m_name);
-		    displayerData("Address", value.home_add);
-		    displayerData("City/Municipality", value.city_municipality);
-		    displayerData("Province", value.province);
-		    displayerData("Postal Code", value.postal_code);
-		    displayerData("Contact No.", value.contact_no);
-			displayerData("Number of children", value.children);
-			displayerData("Bedroom Type", value.bedroom);
-		    displayerData("Mobile No.", value.mobile_no);
-		  });
+		 // $.each(val.users, function(index, value) {
+			displayerData("Last Name", val.user_l_name);
+		    displayerData("First Name", val.user_f_name);
+		    displayerData("Middle Name", val.user_m_name);
+		    displayerData("Address", val.home_add);
+		    displayerData("City/Municipality", val.city_municipality);
+		    displayerData("Province", val.province);
+		    displayerData("Postal Code", val.postal_code);
+		    displayerData("Contact No.", val.contact_no);
+			displayerData("Number of children", val.children);
+			displayerData("Bedroom Type", val.bedroom);
+		    displayerData("Mobile No.", val.mobile_no);
+		 // });
 		}
 	});
 }
