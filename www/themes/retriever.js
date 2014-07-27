@@ -7,13 +7,13 @@ function retriever(page, type){
 				if(type=='employer'){
 					getEmployer(this, 1);
 				} else if(type=='nanny'){
-					getNanny(this, 1);					
+					getNanny(this, 4);					
 				}
 			  }); 
 			} else if(page=="profile" && (Object.keys(val)[0]+"")=="nanny_info"){
 			  $.each(this, function() {
-				if(type=='nannyinfo') {
-					getNannyInfo(this, 1);
+				if(type=='nanny') {
+					getNannyInfo(this, 4);
 				}
 			  });
 			} else if(page=="requests" && (Object.keys(val)[0]+"")=="myrequest"){ 
@@ -31,14 +31,14 @@ function retriever(page, type){
 				} 
 				else if(type=='nannyall'){
 					//get all requests sent to nanny
-				  	getAllNannyRequest(this, 1);					
+				  	getAllNannyRequest(this, 4);					
 				} else if(type=='nannycompleted') {
 					//get all requests accepted by nanny - completed
 					//same CompletedRequest function but pass user_id of nanny				 
-					getCompletedRequest(this, 1);
+					getCompletedRequest(this, 4);
 				} else if(type=='nannyrejected') {
 					//get all requests rejected by nanny				 
-				  	getRejectedRequest(this, 1);
+				  	getRejectedRequest(this, 4);
 				} 
 			  });
 			}
@@ -177,10 +177,11 @@ function getEmployer(items, user_id){
 	});
 }
 
+var i = 1;
 function getNanny(items, user_id){
 	$.each(items, function(index, val) {
 		if(val.user_id==user_id){
-		  $("#displaydata").append('<img style="width:100%;height:auto;" src="themes/images/nanny'+item+'.jpg" />');
+		  $("#displaydata").append('<img style="width:10%;height:auto;" src="themes/images/nanny'+i+'.jpg" />');
 		  displayerData("Last Name", val.user_l_name);
 		  displayerData("First Name", val.user_f_name);
 		  displayerData("Middle Name", val.user_m_name);
@@ -190,8 +191,10 @@ function getNanny(items, user_id){
 		  displayerData("Postal Code", val.postal_code);
 		  displayerData("Contact No.", val.contact_no);
 		  displayerData("Mobile No.", val.mobile_no);
+		  i++;
 		}
 	});
+	i=1;
 }
 
 function getNannyInfo(items, user_id){
