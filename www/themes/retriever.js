@@ -2,19 +2,20 @@ function retriever(page, type){
 	$("#displaydata").empty();	
 	$.getJSON('themes/wyndata.json', function(json) {
 		$.each(json.wyn, function(index, val) {
-			if(page=="profile" && Object.keys(val)[0]+"")=="users"){
+			if(page=="profile" && (Object.keys(val)[0]+"")=="users"){
 			  $.each(this, function() {
 				if(type=='employer'){
 					getEmployer(this, 1);
 				} else if(type=='nanny'){
 					getNanny(this, 1);					
 				}
-			  } 
-			} else if(page=="profile" && Object.keys(val)[0]+"")=="nanny_info"){
+			  }); 
+			} else if(page=="profile" && (Object.keys(val)[0]+"")=="nanny_info"){
 			  $.each(this, function() {
 				if(type=='nannyinfo') {
 					getNannyInfo(this, 1);
 				}
+			  });
 			} else if(page=="requests" && (Object.keys(val)[0]+"")=="myrequest"){ 
 			  $.each(this, function() {
 				if(type=='empall'){
@@ -171,7 +172,7 @@ function getEmployer(items, user_id){
 			displayerData("Number of children", val.children);
 			displayerData("Bedroom Type", val.bedroom);
 		    displayerData("Mobile No.", val.mobile_no);
-		  )}
+		  });
 		}
 	});
 }

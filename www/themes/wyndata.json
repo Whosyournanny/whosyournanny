@@ -1,14 +1,11 @@
-{
-    "wyn": [
-        {
-            "users": [
+{"wyn":[{"users":[
                 {
                     "user_id": "1",
                     "user_f_name": "Guang",
                     "user_m_name": "Zheng",
                     "user_l_name": "Lee",
-		    "user_birthday":"1/16/1992",
-		    "gender":"M",
+                    "user_birthday": "1/16/1992",
+                    "gender": "M",
                     "home_add": "12 Legaspi Street",
                     "city_municipality": "Manila",
                     "province": "Metro Manila",
@@ -22,8 +19,8 @@
                     "user_f_name": "Zheng",
                     "user_m_name": "Lee",
                     "user_l_name": "Manzano",
-		    "user_birthday":"1/17/1992",
-		    "gender":"M",
+                    "user_birthday": "1/17/1992",
+                    "gender": "M",
                     "home_add": "110 Tomas Morato",
                     "city_municipality": "Quezon City",
                     "province": "Metro Manila",
@@ -37,8 +34,8 @@
                     "user_f_name": "Angel",
                     "user_m_name": "Yah",
                     "user_l_name": "Yu",
-		    "user_birthday":"4/21/1980",
-		    "gender":"F",
+                    "user_birthday": "4/21/1980",
+                    "gender": "F",
                     "home_add": "65 Libertad Street",
                     "city_municipality": "Mandaluyong",
                     "province": "Metro Manila",
@@ -52,8 +49,8 @@
                     "user_f_name": "Anna",
                     "user_m_name": "Lah",
                     "user_l_name": "Lee",
-		    "user_birthday":"7/11/1996",
-		    "gender":"F",
+                    "user_birthday": "7/11/1996",
+                    "gender": "F",
                     "home_add": "180 Blumentritt",
                     "city_municipality": "Manila",
                     "province": "Metro Manila",
@@ -67,8 +64,8 @@
                     "user_f_name": "Honey",
                     "user_m_name": "Daz",
                     "user_l_name": "Rakstil",
-		    "user_birthday":"5/16/1972",
-		    "gender":"F",
+                    "user_birthday": "5/16/1972",
+                    "gender": "F",
                     "home_add": "179 Hope Street",
                     "city_municipality": "Makati City",
                     "province": "Metro Manila",
@@ -82,8 +79,8 @@
                     "user_f_name": "Vangie",
                     "user_m_name": "Nat",
                     "user_l_name": "Nang",
-		    "user_birthday":"7/27/1960",
-		    "gender":"F",
+                    "user_birthday": "7/27/1960",
+                    "gender": "F",
                     "home_add": "76 Alonzo Avenue",
                     "city_municipality": "Las Pinas",
                     "province": "Metro Manila",
@@ -95,7 +92,7 @@
             ]
         },
         {
-            "nanny_info": [
+            "nanny_info":[
                 {
                     "nanny_id": "1",
                     "skills": [
@@ -103,7 +100,7 @@
                             "skill": "cleaning"
                         }
                     ],
-		    "rates":"100"
+                    "rates": "100"
                 },
                 {
                     "nanny_id": "2",
@@ -115,7 +112,7 @@
                             "skill": "baby sitting"
                         }
                     ],
-		    "rates":"200"
+                    "rates": "200"
                 },
                 {
                     "nanny_id": "3",
@@ -127,12 +124,12 @@
                             "skill": "cooking"
                         }
                     ],
-		    "rates":"300"
+                    "rates": "300"
                 }
             ]
         },
         {
-            "requests": [
+            "requests":[
                 {
                     "request_id": "1",
                     "requestor_id": "1",
@@ -148,7 +145,7 @@
                         }
                     ],
                     "chosen_nanny": "4",
-		    "Status":"Completed"
+                    "Status": "Completed"
                 },
                 {
                     "request_id": "2",
@@ -168,7 +165,7 @@
                         }
                     ],
                     "chosen_nanny": "4",
-		    "Status":"Pending"
+                    "Status": "Pending"
                 },
                 {
                     "request_id": "3",
@@ -188,7 +185,7 @@
                         }
                     ],
                     "chosen_nanny": "",
-		    "Status":"New"
+                    "Status": "New"
                 },
                 {
                     "request_id": "4",
@@ -203,7 +200,7 @@
                         {}
                     ],
                     "chosen_nanny": "",
-		    "Status":"New"
+                    "Status": "New"
                 },
                 {
                     "request_id": "5",
@@ -218,7 +215,7 @@
                         {}
                     ],
                     "chosen_nanny": "",
-		    "Status":"New"
+                    "Status": "New"
                 },
                 {
                     "request_id": "6",
@@ -233,12 +230,12 @@
                         {}
                     ],
                     "chosen_nanny": "",
-		    "Status":"New"
+                    "Status": "New"
                 }
             ]
         },
         {
-            "notification": [
+            "notification":[
                 {
                     "notif_id": "1",
                     "sender_id": "4",
