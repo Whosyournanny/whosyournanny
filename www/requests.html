@@ -1,0 +1,106 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Who's Your Nanny?</title>>
+	<!--<link rel="stylesheet" href="themes/jquery.mobile-1.4.3.min.css" />-->
+	<link rel="stylesheet" href="themes/sunny.min.css" />	
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.structure-1.4.3.min.css" />
+	<script src="themes/jquery-1.11.1.min.js"></script>
+	<script src="themes/jquery.mobile-1.4.3.min.js"></script>
+	<script src="themes/sunny.js"></script>
+</head>
+
+<body>
+	<div class="font-gray" data-role="page" data-theme="a"> 
+		<div align="center" id="mypanel" class="custom-panel" data-role="panel" data-position="left" data-display="overlay">
+				<!-- panel content goes here -->
+			<div class="panel-wrapper">
+				<ul id="navListPanel" data-role="listview">
+					<li class="liClass" id="listPanelClose" data-icon="delete"><a class="black font-white" href="#" data-rel="close" style="font-size:small; text-align:right;">Close Menu</a></li>
+										<li><a class="brown font-white" href="1indexNan.html" data-transition="slide">
+						<h3>Home</h3>
+						<p>FAQ, Information</p>
+					</a></li>
+					<li><a class="pink font-white" href="1profileNan.html" data-transition="slide">
+						<h3>Profile</h3>
+						<p>Profile, Contact Details</p>
+					</a></li>
+					<li><a class="aquamarine font-white" href="1requestsNan.html" data-transition="slide">
+						<h3>Requests</h3>
+						<p>View Requests</p>
+						<span style="font-size:x-small;" class="ui-li-count">2 Pending</span>
+					</a></li>
+					<li><a class="violet font-white" href="1locateNan.html" data-transition="slide">
+						<h3>Locate</h3>
+						<p>Find People</p>
+					</a></li>
+					<li class="top-block black"><p style="text-align:center; font-size:small;"><a class="font-white" href="#" data-transition="slide">Log Out</a></p></li>
+				</ul>
+			</div>
+		</div>
+		<!-- /panel -->
+	
+		<div class="black font-white" data-role="header" data-position="fixed">
+			<div class="ui-grid-d">
+				<div class="ui-block-a"><a href="#mypanel" class="ui-btn custom-ui-btn ui-corner-all ui-nodisc-icon ui-icon-bars ui-btn-icon-notext">Menu</a></div>
+				<div class="ui-block-b"><p></p></div>
+				<div class="ui-block-c"><p></p></div>
+				<div class="ui-block-d"><p></p></div>
+				<div class="ui-block-e">
+					<div class="ui-grid-a">
+						<div class="ui-block-a"><a href="notifications.html" class="ui-btn custom-ui-btn ui-corner-all ui-nodisc-icon ui-icon-mail ui-btn-icon-notext">Menu</a></div>
+						<div class="ui-block-b"><a href="people.html" class="ui-btn custom-ui-btn ui-corner-all ui-nodisc-icon ui-icon-comment ui-btn-icon-notext">Menu</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--<div><p style="font-size:small;">Welcome Lastname, Firstname MI.</p></div>
+		<div><p style="font-size:x-small;">July 13, 2014</p></div>-->
+		
+		<div data-role="content" data-theme="a" class="custom-content font-gray">
+			<div class="ui-field-contain custom-field">
+				<div class="ui-grid-a aquamarine">
+					<div class="ui-block-a" style="width:30%;" align="center">
+						<p class="font-white" style="font-weight:500;">Requests</p>
+					</div>
+					<div class="ui-block-b" style="width:70%;">
+						<label for="select-custom-21"></label>
+						<select name="select-custom-21" id="ReqDropdown" data-mini="true" data-native-menu="false">
+							<option value="choose-one" data-placeholder="true">Choose one</option>
+							<option value="empall">All Requests</option>
+    						<option value="emppending">Pending Requests</option>
+    						<option value="empresolved">Completed Requests</option>
+    						<option value="empnew">Rejected Requests</option>
+						</select>
+					</div>
+				</div>
+			</div>
+
+		</div>	
+		<div data-role="content" data-theme="a" class="font-gray" style="padding-top:0;">
+			<div id="displaydata" class="ui-field-contain">
+				<div class="ui-grid-solo font-black" style="font-size:small;">
+					<div class="ui-block-a">
+						Log your Human Resource related requests and different services offered by this system. From requesting changes in your profile to simple inquiries to HR, this is a quick and simple way to send your requests from anywhere.
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!--SCRIPT TAGS -->
+		<script src="themes/retriever.js"></script>
+		<script src="themes/sunny.js"></script>
+		<script>
+			//createReqView("employee");
+			$(document.body).on('change','#ReqDropdown',function(e){
+				//alert(this.options[e.target.selectedIndex].text);
+				//alert($("#EmpDropdown").val());
+			  	retriever('requests', $("#ReqDropdown").val());
+			});
+		</script>
+	</div>
+</body>
+</html>

@@ -1,0 +1,310 @@
+{
+    "wyn": [
+        {
+            "users": [
+                {
+                    "user_id": "1",
+                    "user_f_name": "Guang",
+                    "user_m_name": "Zheng",
+                    "user_l_name": "Lee",
+		    "user_birthday":"1/16/1992",
+		    "gender":"M",
+                    "home_add": "12 Legaspi Street",
+                    "city_municipality": "Manila",
+                    "province": "Metro Manila",
+                    "postal_code": "1432",
+                    "contact_no": "4627899",
+                    "mobile_no": "9176348721",
+                    "user_type": "employer"
+                },
+                {
+                    "user_id": "2",
+                    "user_f_name": "Zheng",
+                    "user_m_name": "Lee",
+                    "user_l_name": "Manzano",
+		    "user_birthday":"1/17/1992",
+		    "gender":"M",
+                    "home_add": "110 Tomas Morato",
+                    "city_municipality": "Quezon City",
+                    "province": "Metro Manila",
+                    "postal_code": "1762",
+                    "contact_no": "4732287",
+                    "mobile_no": "9267389930",
+                    "user_type": "employer"
+                },
+                {
+                    "user_id": "3",
+                    "user_f_name": "Angel",
+                    "user_m_name": "Yah",
+                    "user_l_name": "Yu",
+		    "user_birthday":"4/21/1980",
+		    "gender":"F",
+                    "home_add": "65 Libertad Street",
+                    "city_municipality": "Mandaluyong",
+                    "province": "Metro Manila",
+                    "postal_code": "1664",
+                    "contact_no": "7639938",
+                    "mobile_no": "9187398498",
+                    "user_type": "employer"
+                },
+                {
+                    "user_id": "1",
+                    "user_f_name": "Anna",
+                    "user_m_name": "Lah",
+                    "user_l_name": "Lee",
+		    "user_birthday":"7/11/1996",
+		    "gender":"F",
+                    "home_add": "180 Blumentritt",
+                    "city_municipality": "Manila",
+                    "province": "Metro Manila",
+                    "postal_code": "1873",
+                    "contact_no": "6512354",
+                    "mobile_no": "9182736534",
+                    "user_type": "nanny"
+                },
+                {
+                    "user_id": "2",
+                    "user_f_name": "Honey",
+                    "user_m_name": "Daz",
+                    "user_l_name": "Rakstil",
+		    "user_birthday":"5/16/1972",
+		    "gender":"F",
+                    "home_add": "179 Hope Street",
+                    "city_municipality": "Makati City",
+                    "province": "Metro Manila",
+                    "postal_code": "1829",
+                    "contact_no": "6346242",
+                    "mobile_no": "9384729402",
+                    "user_type": "nanny"
+                },
+                {
+                    "user_id": "3",
+                    "user_f_name": "Vangie",
+                    "user_m_name": "Nat",
+                    "user_l_name": "Nang",
+		    "user_birthday":"7/27/1960",
+		    "gender":"F",
+                    "home_add": "76 Alonzo Avenue",
+                    "city_municipality": "Las Pinas",
+                    "province": "Metro Manila",
+                    "postal_code": "1728",
+                    "contact_no": "6374829",
+                    "mobile_no": "9182743645",
+                    "user_type": "nanny"
+                }
+            ]
+        },
+        {
+            "nanny_info": [
+                {
+                    "nanny_id": "1",
+                    "skills": [
+                        {
+                            "skill": "cleaning"
+                        }
+                    ],
+		    "rates":"100"
+                },
+                {
+                    "nanny_id": "2",
+                    "skills": [
+                        {
+                            "skill": "cleaning"
+                        },
+                        {
+                            "skill": "baby sitting"
+                        }
+                    ],
+		    "rates":"200"
+                },
+                {
+                    "nanny_id": "3",
+                    "skills": [
+                        {
+                            "skill": "cleaning"
+                        },
+                        {
+                            "skill": "cooking"
+                        }
+                    ],
+		    "rates":"300"
+                }
+            ]
+        },
+        {
+            "requests": [
+                {
+                    "request_id": "1",
+                    "requestor_id": "1",
+                    "date_created": "7/25/2014 10:20:30AM",
+                    "request_category": "Cleaning",
+                    "req_from_date": "7/26/2014",
+                    "req_to_date": "7/27/2014",
+                    "budget": "2000",
+                    "req_add_info": "",
+                    "applicants": [
+                        {
+                            "user_id": "4"
+                        }
+                    ],
+                    "chosen_nanny": "4",
+		    "Status":"Completed"
+                },
+                {
+                    "request_id": "2",
+                    "requestor_id": "2",
+                    "date_created": "7/26/2014 10:12:10AM",
+                    "request_category": "Baby Sitting",
+                    "req_from_date": "8/1/2014",
+                    "req_to_date": "8/6/2014",
+                    "budget": "15000",
+                    "req_add_info": "MWF; Stay-in nanny",
+                    "applicants": [
+                        {
+                            "user_id": "4"
+                        },
+                        {
+                            "user_id": "6"
+                        }
+                    ],
+                    "chosen_nanny": "4",
+		    "Status":"Pending"
+                },
+                {
+                    "request_id": "3",
+                    "requestor_id": "3",
+                    "date_created": "7/26/2014 12:01:50AM",
+                    "request_category": "Cooking",
+                    "req_from_date": "8/2/2014",
+                    "req_to_date": "8/7/2014",
+                    "budget": "5000",
+                    "req_add_info": "Stay-out",
+                    "applicants": [
+                        {
+                            "user_id": "4"
+                        },
+                        {
+                            "user_id": "6"
+                        }
+                    ],
+                    "chosen_nanny": "",
+		    "Status":"New"
+                },
+                {
+                    "request_id": "4",
+                    "requestor_id": "1",
+                    "date_created": "7/27/2014 5:22:01PM",
+                    "request_category": "Cooking",
+                    "req_from_date": "8/10/2014",
+                    "req_to_date": "8/11/2014",
+                    "budget": "1000",
+                    "req_add_info": "Stay-out",
+                    "applicants": [
+                        {}
+                    ],
+                    "chosen_nanny": "",
+		    "Status":"New"
+                },
+                {
+                    "request_id": "5",
+                    "requestor_id": "1",
+                    "date_created": "7/27/2014 6:30:30PM",
+                    "request_category": "Cleaning",
+                    "req_from_date": "8/10/2014",
+                    "req_to_date": "8/11/2014",
+                    "budget": "2000",
+                    "req_add_info": "Stay-out",
+                    "applicants": [
+                        {}
+                    ],
+                    "chosen_nanny": "",
+		    "Status":"New"
+                },
+                {
+                    "request_id": "6",
+                    "requestor_id": "2",
+                    "date_created": "7/27/2014 6:32:10PM",
+                    "request_category": "Cooking",
+                    "req_from_date": "8/10/2014",
+                    "req_to_date": "8/11/2014",
+                    "budget": "2000",
+                    "req_add_info": "Stay-out",
+                    "applicants": [
+                        {}
+                    ],
+                    "chosen_nanny": "",
+		    "Status":"New"
+                }
+            ]
+        },
+        {
+            "notification": [
+                {
+                    "notif_id": "1",
+                    "sender_id": "4",
+                    "receiver_id": "1",
+                    "message": [
+                        {
+                            "type": "application"
+                        },
+                        {
+                            "request_id": "1"
+                        }
+                    ]
+                },
+                {
+                    "notif_id": "2",
+                    "sender_id": "4",
+                    "receiver_id": "2",
+                    "message": [
+                        {
+                            "type": "application"
+                        },
+                        {
+                            "request_id": "2"
+                        }
+                    ]
+                },
+                {
+                    "notif_id": "3",
+                    "sender_id": "6",
+                    "receiver_id": "2",
+                    "message": [
+                        {
+                            "type": "application"
+                        },
+                        {
+                            "request_id": "2"
+                        }
+                    ]
+                },
+                {
+                    "notif_id": "4",
+                    "sender_id": "4",
+                    "receiver_id": "3",
+                    "message": [
+                        {
+                            "type": "application"
+                        },
+                        {
+                            "request_id": "3"
+                        }
+                    ]
+                },
+                {
+                    "notif_id": "5",
+                    "sender_id": "6",
+                    "receiver_id": "3",
+                    "message": [
+                        {
+                            "type": "application"
+                        },
+                        {
+                            "request_id": "3"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

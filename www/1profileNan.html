@@ -1,0 +1,155 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Who's Your Nanny?</title>>
+	<!--<link rel="stylesheet" href="themes/jquery.mobile-1.4.3.min.css" />-->
+	<link rel="stylesheet" href="themes/sunny.min.css" />	
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.structure-1.4.3.min.css" />
+	<script src="themes/jquery-1.11.1.min.js"></script>
+	<script src="themes/jquery.mobile-1.4.3.min.js"></script>
+	<script src="themes/sunny.js"></script>
+	
+	<style type="text/css">
+.btnMatch {
+	-moz-box-shadow:inset 0px 1px 3px -21px #fceaca;
+	-webkit-box-shadow:inset 0px 1px 3px -21px #fceaca;
+	box-shadow:inset 0px 1px 3px -21px #fceaca;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffce79), color-stop(1, #eeaf41) );
+	background:-moz-linear-gradient( center top, #ffce79 5%, #eeaf41 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffce79', endColorstr='#eeaf41');
+	background-color:#ffce79;
+	-webkit-border-top-left-radius:42px;
+	-moz-border-radius-topleft:42px;
+	border-top-left-radius:42px;
+	-webkit-border-top-right-radius:42px;
+	-moz-border-radius-topright:42px;
+	border-top-right-radius:42px;
+	-webkit-border-bottom-right-radius:42px;
+	-moz-border-radius-bottomright:42px;
+	border-bottom-right-radius:42px;
+	-webkit-border-bottom-left-radius:42px;
+	-moz-border-radius-bottomleft:42px;
+	border-bottom-left-radius:42px;
+	text-indent:0px;
+	border:4px solid #eeb44f;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:28px;
+	font-weight:bold;
+	font-style:normal;
+	height:100px;
+	line-height:100px;
+	width:200px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:0px -1px 50px #ce8e28;
+	left:25%;
+}
+.btnMatch:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #eeaf41), color-stop(1, #ffce79) );
+	background:-moz-linear-gradient( center top, #eeaf41 5%, #ffce79 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeaf41', endColorstr='#ffce79');
+	background-color:#eeaf41;
+}</style>
+
+</head>
+
+<body>
+	<div class="font-gray" id="profile" data-role="page" data-theme="a"> 
+		<div align="center" id="mypanel" class="custom-panel" data-role="panel" data-position="left" data-display="overlay">
+		<!-- panel content goes here -->
+			<div class="panel-wrapper">
+				<ul id="navListPanel" data-role="listview">
+					<li class="liClass" id="listPanelClose" data-icon="delete"><a class="black font-white" href="#" data-rel="close" style="font-size:small; text-align:right;">Close Menu</a></li>
+										<li><a class="brown font-white" href="1indexNan.html" data-transition="slide">
+						<h3>Home</h3>
+						<p>FAQ, Information</p>
+					</a></li>
+					<li><a class="pink font-white" href="1profileNan.html" data-transition="slide">
+						<h3>Profile</h3>
+						<p>Profile, Contact Details</p>
+					</a></li>
+					<li><a class="aquamarine font-white" href="1requestsNan.html" data-transition="slide">
+						<h3>Requests</h3>
+						<p>View Requests</p>
+						<span style="font-size:x-small;" class="ui-li-count">2 Pending</span>
+					</a></li>
+					<li><a class="violet font-white" href="1locateNan.html" data-transition="slide">
+						<h3>Locate</h3>
+						<p>Find People</p>
+					</a></li>
+					<li class="top-block black"><p style="text-align:center; font-size:small;"><a class="font-white" href="#" data-transition="slide">Log Out</a></p></li>
+				</ul>
+			</div>
+		</div>
+		<!-- /panel -->
+	
+		<div class="black font-white" data-role="header" data-position="fixed">
+			<div class="ui-grid-d">
+				<div class="ui-block-a"><a href="#mypanel" class="ui-btn custom-ui-btn ui-corner-all ui-nodisc-icon ui-icon-bars ui-btn-icon-notext">Menu</a></div>
+				<div class="ui-block-b"><p></p></div>
+				<div class="ui-block-c"><p></p></div>
+				<div class="ui-block-d"><p></p></div>
+				<div class="ui-block-e">
+					<div class="ui-grid-a">
+						<div class="ui-block-a"><a href="notifications.html" class="ui-btn custom-ui-btn ui-corner-all ui-nodisc-icon ui-icon-mail ui-btn-icon-notext">Menu</a></div>
+						<div class="ui-block-b"><a href="people.html" class="ui-btn custom-ui-btn ui-corner-all ui-nodisc-icon ui-icon-comment ui-btn-icon-notext">Menu</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--<div><p style="font-size:small;">Welcome Lee, Anna L.</p></div>
+		<div><p style="font-size:x-small;">July 13, 2014</p></div>-->
+		
+		<div data-role="content" data-theme="a" class="custom-content font-gray">
+			<div class="ui-field-contain custom-field">
+				<div class="ui-grid-a pink">
+					<div class="ui-block-a" style="width:20%;" align="center">
+						<p class="font-white" style="font-weight:500;">Profile</p>
+					</div>
+					<div class="ui-block-b" style="width:80%;">
+						<label for="select-custom-21"></label>
+						<select name="select-custom-21" id="EmpDropdown" data-mini="true" data-native-menu="false">
+							<option value="choose-one" data-placeholder="true">Choose one</option>
+								<option value="personal">Personal Details</option>
+        						<option value="personal">Contact Details</option>
+						</select>
+					</div>
+				</div><div style="padding-top:0;" class="font-gray ui-content ui-body-a" data-theme="a" data-role="content" role="main">
+			<div class="ui-field-contain" id="displaydata">
+				<div style="font-size:small;" class="ui-grid-solo font-black">
+					<div class="ui-block-a">
+						<br/>
+						<div style="text-align:center;">
+						<a href="1locateNan.html" class="btnMatch">Match Me!</div></a><br/><br/>
+						<p>By clicking this button we'll find you the maid best suited on your needs!</p>
+						
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+			</div>
+
+		</div>	
+		<!--SCRIPT TAGS -->
+		<script src="themes/retriever.js"></script>
+		<script>
+		$(document).on('pageshow', '#profile', function(){ 
+		    var content_width = $.mobile.activePage.find("div[data-role='content']:visible:visible").outerWidth();
+		    var content_height = $.mobile.activePage.find("div[data-role='content']:visible:visible").outerHeight();
+		    $('.custom-popup').css({'width':content_width*0.8},{'height':content_height*0.9});
+		});
+			$(document.body).on('change','#EmpDropdown',function(e){
+				//alert(this.options[e.target.selectedIndex].text);
+				//alert($("#EmpDropdown").val());
+			  	retriever('profile', $("#EmpDropdown").val());
+			});
+		</script>
+	</div>
+</body>
+</html>

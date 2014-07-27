@@ -1,0 +1,141 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Who's Your Nanny?</title>>
+	<!--<link rel="stylesheet" href="themes/jquery.mobile-1.4.3.min.css" />-->
+	<link rel="stylesheet" href="themes/sunny.min.css" />	
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.structure-1.4.3.min.css" />
+	<script src="themes/jquery-1.11.1.min.js"></script>
+	<script src="themes/jquery.mobile-1.4.3.min.js"></script>
+	<script src="themes/sunny.js"></script>
+</head>
+
+<body>
+	<div id="map-page" class="font-gray" data-role="page" data-theme="a"> 
+		<div align="center" id="mypanel" class="custom-panel" data-role="panel" data-position="left" data-display="overlay">
+				<!-- panel content goes here -->
+			<div class="panel-wrapper">
+				<ul id="navListPanel" data-role="listview">
+					<li class="liClass" id="listPanelClose" data-icon="delete"><a class="black font-white" href="#" data-rel="close" style="font-size:small; text-align:right;">Close Menu</a></li>
+										<li><a class="brown font-white" href="1indexNan.html" data-transition="slide">
+						<h3>Home</h3>
+						<p>FAQ, Information</p>
+					</a></li>
+					<li><a class="pink font-white" href="1profileNan.html" data-transition="slide">
+						<h3>Profile</h3>
+						<p>Profile, Contact Details</p>
+					</a></li>
+					<li><a class="aquamarine font-white" href="1requestsNan.html" data-transition="slide">
+						<h3>Requests</h3>
+						<p>View Requests</p>
+						<span style="font-size:x-small;" class="ui-li-count">2 Pending</span>
+					</a></li>
+					<li><a class="violet font-white" href="1locateNan.html" data-transition="slide">
+						<h3>Locate</h3>
+						<p>Find People</p>
+					</a></li>
+					<li class="top-block black"><p style="text-align:center; font-size:small;"><a class="font-white" href="#" data-transition="slide">Log Out</a></p></li>
+				</ul>
+			</div>
+		</div>
+		<!-- /panel -->
+	
+		<div class="black font-white" id="header" data-role="header" data-position="fixed">
+			<div class="ui-grid-d">
+				<div class="ui-block-a"><a href="#mypanel" class="ui-btn custom-ui-btn ui-corner-all ui-nodisc-icon ui-icon-bars ui-btn-icon-notext">Menu</a></div>
+				<div class="ui-block-b"><p></p></div>
+				<div class="ui-block-c"><p></p></div>
+				<div class="ui-block-d"><p></p></div>
+				<div class="ui-block-e">
+					<div class="ui-grid-a">
+						<div class="ui-block-a"><a href="notifications.html" class="ui-btn custom-ui-btn ui-corner-all ui-nodisc-icon ui-icon-mail ui-btn-icon-notext">Menu</a></div>
+						<div class="ui-block-b"><a href="people.html" class="ui-btn custom-ui-btn ui-corner-all ui-nodisc-icon ui-icon-comment ui-btn-icon-notext">Menu</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--<div><p style="font-size:small;">Welcome Lastname, Firstname MI.</p></div>
+		<div><p style="font-size:x-small;">July 13, 2014</p></div>-->	
+	 
+		<div data-role="content" data-theme="a" class="custom-content font-gray">
+			<div class="ui-field-contain custom-field">
+				<div class="ui-grid-a violet">
+					<div class="ui-block-a" style="width:20%;" align="center">
+						<p class="font-white" style="font-weight:500;">Locate</p>
+					</div>
+					<div class="ui-block-b" style="width:80%;">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div data-role="content" id="map-content" align="center">
+			<br />
+			<div id="map-canvas">
+	    		<!-- map loads here... -->
+		    	</div>
+		</div>
+		<br /><br />
+		<div data-role="content" data-theme="a" class="custom-content font-gray">
+			<div id="places" class="ui-field-contain custom-field">
+			<ul data-role="listview" data-filter="true" data-filter-placeholder="Search for a place..." data-inset="true">
+    				<li class="custom-field">
+					<div class="ui-grid-a violet">
+					<div class="ui-block-a" style="width:30%;" align="center">
+						<p class="font-white" style="font-weight:500;">Filter by:</p>
+					</div>
+					<div class="ui-block-b" style="width:70%;">
+						<label for="select-custom-21"></label>
+						<select name="select-custom-21" id="MapDropdown" data-mini="true" data-native-menu="false">
+							<option value="choose-one" data-placeholder="true">Choose one</option>
+							<option value="all">All Matches</option>
+        						<option value="all">Skills</option>
+        						<option value="all">Nearest</option>
+        						<option value="all">Cheapest</option>
+						</select>
+					</div>
+				</div>
+
+				</li>
+				<li><a href="#">
+			        <img src="themes/images/nanny1.jpg">
+				    <h2>Anna Lee</h2>
+				    <p style="font-size:x-small;">3rd Ayala Ave cor Pasay Rd, Ayala, Makati</p>
+				    <p style="font-size:x-small;">(02) 729-8458 to 59</p>
+				    <p class="ui-li-aside"><strong>0.1km</strong></p>
+                                    </a>
+			        </li>
+			        <li><a href="#">
+ 				    <img src="themes/images/nanny2.jpg">
+				    <h2>Anna Liu</h2>
+				    <p style="font-size:x-small;">54 EDSA cor Julia Vargas Ave.Wack Wack, Mandaluyong</p>
+				    <p style="font-size:x-small;">(02) 636-1340</p>
+				    <p class="ui-li-aside"><strong>5.2km</strong></p>
+				    </a>
+				</li>
+				<li><a href="#">
+				    <img src="themes/images/nanny3.jpg">
+				    <h2>Honey Rocksteel</h2>
+				    <p style="font-size:x-small;">902 Bonifacio High Street, Bonifacio Global City 1634 Taguig City</p>
+				    <p style="font-size:x-small;">(632) 858-7000 | 858-7036 | 858-7037 | 858-7038 </p>
+				    <p class="ui-li-aside"><strong>2.3km</strong></p>
+                     </a>
+				</li>
+			</ul>
+			</div>
+		</div>
+		<!--SCRIPT TAGS -->
+		<script src="themes/retriever2.js"></script>
+		<script>
+			$(document.body).on('change','#MapDropdown',function(e){
+				//alert(this.options[e.target.selectedIndex].text);
+				//alert($("#MapDropdown").val());
+			  	mapper($("#MapDropdown").val());
+			});
+		</script>
+	</div>
+</body>
+</html>

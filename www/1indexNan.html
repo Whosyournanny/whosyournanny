@@ -1,0 +1,351 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Who's Your Nanny?</title>
+	<link rel="stylesheet" href="themes/sunny.min.css" />	
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.structure-1.4.3.min.css" />
+	<script src="themes/jquery-1.11.1.min.js"></script>
+	<script src="themes/jquery.mobile-1.4.3.min.js"></script>
+	<script src="themes/sunny.js"></script>
+
+<style>	
+	#holder {
+  width: 100%;
+}
+
+#holder > div {
+  clear: both;
+  padding: 2%;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  float: left;
+  width: 96%;
+}
+
+label {
+  display: inline;
+}
+
+.regular-checkbox {
+  display: none;
+}
+
+.regular-checkbox + label {
+  background-color: #fafafa;
+  border: 1px solid #cacece;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+  padding: 9px;
+  border-radius: 3px;
+  display: inline-block;
+  position: relative;
+}
+
+.regular-checkbox + label:active, .regular-checkbox:checked + label:active {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+.regular-checkbox:checked + label {
+  background-color: #e9ecee;
+  border: 1px solid #adb8c0;
+
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+  color: #99a1a7;
+}
+
+.regular-checkbox:checked + label:after {
+  content: '\2714';
+  font-size: 14px;
+  position: absolute;
+  top: 0px;
+  left: 3px;
+  color: #99a1a7;
+}
+
+.big-checkbox + label {
+  padding: 18px;
+}
+
+.big-checkbox:checked + label:after {
+  font-size: 28px;
+  left: 6px;
+}
+
+.tag {
+  font-family: Arial, sans-serif;
+  width: 200px;
+  position: relative;
+  top: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: block;
+  float: left;
+}
+
+.radio-1 {
+  width: 193px;
+}
+
+.button-holder {
+  float: left;
+} 
+ 
+/* RADIO */ 
+ 
+.regular-radio {
+  display: none;
+}
+
+.regular-radio + label {
+  -webkit-appearance: none;
+  background-color: #fafafa;
+  border: 1px solid #cacece;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+  padding: 9px;
+  border-radius: 50px;
+  display: inline-block;
+  position: relative;
+}
+
+.regular-radio:checked + label:after {
+  content: ' ';
+  width: 12px;
+  height: 12px;
+  border-radius: 50px;
+  position: absolute;
+  top: 3px;
+  background: #99a1a7;
+  box-shadow: inset 0px 0px 10px rgba(0,0,0,0.3);
+  text-shadow: 0px;
+  left: 3px;
+  font-size: 32px;
+}
+
+.regular-radio:checked + label {
+  background-color: #e9ecee;
+  color: #99a1a7;
+  border: 1px solid #adb8c0;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1), inset 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.regular-radio + label:active, .regular-radio:checked + label:active {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+.big-radio + label {
+  padding: 16px;
+}
+
+.big-radio:checked + label:after {
+  width: 24px;
+  height: 24px;
+  left: 4px;
+  top: 4px;
+}
+
+
+/* slider css */-------------------------------------------------------------
+#slider {
+	width: 5%;
+	height: 17px;
+	position: relative;
+	margin: 100px auto;
+	background: #10171D;
+	
+	-webkit-border-radius: 40px;
+	-moz-border-radius: 40px;
+	border-radius: 40px;
+	
+	-webkit-box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.9), 0px 1px 1px 0px rgba(255, 255, 255, 0.13);
+	-moz-box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.9), 0px 1px 1px 0px rgba(255, 255, 255, 0.13);
+	box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.9), 0px 1px 1px 0px rgba(255, 255, 255, 0.13);
+}
+
+#slider .bar {
+color:white;
+	
+	background: #1d2e38;
+	background: -moz-linear-gradient(left, #1d2e38 0%, #2b4254 50%, #2b4254 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#1d2e38), color-stop(50%,#2b4254), color-stop(100%,#2b4254));
+	background: -webkit-linear-gradient(left, #1d2e38 0%,#2b4254 50%,#2b4254 100%);
+	background: -o-linear-gradient(left, #1d2e38 0%,#2b4254 50%,#2b4254 100%);
+	background: -ms-linear-gradient(left, #1d2e38 0%,#2b4254 50%,#2b4254 100%);
+	background: linear-gradient(left, #1d2e38 0%,#2b4254 50%,#2b4254 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1d2e38', endColorstr='#2b4254',GradientType=1 );	
+	
+	-webkit-border-radius: 40px;
+	-moz-border-radius: 40px;
+	border-radius: 40px;
+}
+
+#slider .highlight {
+	height: 2px;
+	position: absolute;
+	width: 388px;
+	top: 6px;
+	left: 0px;
+		
+	-webkit-border-radius: 40px;
+	-moz-border-radius: 40px;
+	border-radius: 40px;
+	
+	background: rgba(255, 255, 255, 0.25);
+}
+
+input[type="range"] {
+	-webkit-appearance: none;
+	background-color: black;
+	height: 2px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	position: relative;
+	top: 0px;
+	z-index: 1;
+	width: 11px;
+	height: 11px;
+	cursor: pointer;
+	-webkit-box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.6);
+	-moz-box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.6);
+	box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.6);
+	-webkit-border-radius: 40px;
+	-moz-border-radius: 40px;
+	border-radius: 40px;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ebf1f6), color-stop(50%,#abd3ee), color-stop(51%,#89c3eb), color-stop(100%,#d5ebfb));
+}
+
+input[type="range"]:hover ~ #rangevalue,input[type="range"]:active ~ #rangevalue {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+	top: -75px;
+}
+
+</style>
+</head>
+
+<body>
+	<div class="font-gray" data-role="page" data-theme="a">
+		<div align="center" id="mypanel" class="custom-panel" data-role="panel" data-position="left" data-display="overlay">
+		<!-- panel content goes here -->
+			<div class="panel-wrapper">
+				<ul id="navListPanel" data-role="listview">
+					<li class="liClass" id="listPanelClose" data-icon="delete"><a class="black font-white" href="#" data-rel="close" style="font-size:small; text-align:right;">Close Menu</a></li>
+										<li><a class="brown font-white" href="1indexNan.html" data-transition="slide">
+						<h3>Home</h3>
+						<p>FAQ, Information</p>
+					</a></li>
+					<li><a class="pink font-white" href="1profileNan.html" data-transition="slide">
+						<h3>Profile</h3>
+						<p>Profile, Contact Details</p>
+					</a></li>
+					<li><a class="aquamarine font-white" href="1requestsNan.html" data-transition="slide">
+						<h3>Requests</h3>
+						<p>View Requests</p>
+						<span style="font-size:x-small;" class="ui-li-count">2 Pending</span>
+					</a></li>
+					<li><a class="violet font-white" href="1locateNan.html" data-transition="slide">
+						<h3>Locate</h3>
+						<p>Find People</p>
+					</a></li>
+					<li class="top-block black"><p style="text-align:center; font-size:small;"><a class="font-white" href="#" data-transition="slide">Log Out</a></p></li>
+				</ul>
+			</div>
+		</div>
+		<!-- /panel -->
+		
+		<div class="black font-white" data-role="header" data-position="fixed">
+			<div class="ui-grid-d">
+				<div class="ui-block-a"><a href="#mypanel" class="ui-btn custom-ui-btn ui-corner-all ui-nodisc-icon ui-icon-bars ui-btn-icon-notext">Menu</a></div>
+				<div class="ui-block-b"><p></p></div>
+				<div class="ui-block-c"><p></p></div>
+				<div class="ui-block-d"><p></p></div>
+				<div class="ui-block-e">
+					<div class="ui-grid-a">
+						<div class="ui-block-a"><a href="notifications.html" class="ui-btn custom-ui-btn ui-corner-all ui-nodisc-icon ui-icon-mail ui-btn-icon-notext">Menu</a></div>
+						<div class="ui-block-b"><a href="people.html" class="ui-btn custom-ui-btn ui-corner-all ui-nodisc-icon ui-icon-comment ui-btn-icon-notext">Menu</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+			<div><p style="font-size:small;">Welcome Lee, Anna L.</p></div>
+			<div><p style="font-size:x-small;">July 27, 2014</p></div>
+		<div data-role="content" data-theme="a"  class="custom-content font-gray">
+			<div class="ui-field-contain custom-field">
+			<p class="font-black" style="font-weight:bold;">Home</p>
+				<div class="ui-grid-solo custom-grid">
+					<div class="ui-block-a">
+						<div class="ui-grid-solo font-black">
+							<div class="ui-block-a coffee font-white" style="padding:2%;margin-bottom:2%;">
+								Notifications
+							</div>
+							<div class="ui-block-a" style="margin-bottom:2%;">
+								<ul data-role="listview" data-inset="false" style="padding:2%;">
+								    <li data-icon="false"><a class="custom-list-pad" href="1requestsNan.html">
+								    <p style="font-weight:bold;">Application Successful</p>
+								    <p>You have submitted an application to Kenneth Lee</p>
+								    <p class="ui-li-aside"><strong>6:24</strong>PM</p>
+								    </a></li>
+								    <li data-icon="false"><a class="custom-list-pad" href="profile.html">
+								    <p style="font-weight:bold;">Information Set</p>
+								    <p>Your maid preferrences has been updated </p>
+								    <p class="ui-li-aside"><strong>9:18</strong>AM</p>
+								    </a></li>
+								</ul>
+							</div>	
+						</div>							
+					</div>
+					<div class="ui-block-a">
+						<div class="ui-grid-solo font-black">
+							<div class="ui-block-a black font-white" style="padding:2%;margin-bottom:2%;">
+								News
+							</div>
+							<div class="ui-block-a" style="margin-bottom:2%;">
+								<ul data-role="listview" data-inset="false" style="padding:2%;">
+								    <li data-icon="false"><a class="custom-list-pad" href="index.html">
+								    <p style="font-weight:bold;">Stephen Weber</p>
+								    <p>Created an article about an outstanding maid</p>
+								    </a></li>
+								    <li data-icon="false"><a class="custom-list-pad" href="index.html">
+								    <p style="font-weight:bold;">Congratulations!</p>
+								    <p>There are 1,000 new maids registered as of today.</p>
+								    </a></li>
+								</ul>
+							</div>
+							<div class="ui-block-a">
+							   
+							</div>
+						</div>
+					</div>	<br/><div align="center"">
+					<div style="width:50%; text-align:left;" align="center">			
+					<h3 align=center>Amo Finder</h3>
+					<strong>Preference</strong><br/>
+					
+<p><strong>Gender:</strong> </p>
+
+<input type="radio" id="radio-1-1" name="radio-1-set" class="regular-radio" checked /><label for="radio-1-1">Male</label> 
+<input type="radio" id="radio-1-2" name="radio-1-set" class="regular-radio" /><label for="radio-1-2">Female</label>
+
+<p><strong>Skills:</strong></p> <input type="checkbox" id="checkbox-1-1" class="regular-checkbox" /><label for="checkbox-1-1">Cleaning</label> 
+<input type="checkbox" id="checkbox-1-2" class="regular-checkbox" /><label for="checkbox-1-2">Cooking</label> 
+<input type="checkbox" id="checkbox-1-3" class="regular-checkbox"/><label for="checkbox-1-3">Baby Sitting</label>
+<input type="checkbox" id="checkbox-1-4" class="regular-checkbox"/><label for="checkbox-1-4">Gardening</label>
+
+<p><strong>Location:</strong></p> <select><option>Choose</option><option>Manila</option><option>Pasay</option><option>Quezon</option><option>Mandaluyong</option><option>Makati</option></select><a>Show Map</a>
+<br/><br/>Rates: <div id="slider">
+	<input class="bar" type="range" id="rangeinput" value="500"  max="10000" value="500" />
+
+	
+</div><br/><br/>
+
+<button onclick="window.location='1locateNan.html';">Search</button>
+					</div></div>
+							
+				</div>
+			</div>		
+		</div>
+	</div>
+</body>
+</html>
