@@ -181,7 +181,7 @@ var i = 1;
 function getNanny(items, user_id){
 	$.each(items, function(index, val) {
 		if(val.user_id==user_id){
-		  $("#displaydata").append('<img style="width:10%;height:auto;" src="themes/images/nanny'+i+'.jpg" />');
+		  $("#displaydata").append('<div align="center"><img style="width:30%;height:auto;" src="themes/images/nanny'+i+'.jpg" /></div><br />');
 		  displayerData("Last Name", val.user_l_name);
 		  displayerData("First Name", val.user_f_name);
 		  displayerData("Middle Name", val.user_m_name);
